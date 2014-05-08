@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imgViewMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/images" />
+
+    <Button
+        android:id="@+id/btnRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:text="Rainbow" 
+        android:onClick="showRain"
+        />
+
+    <Button
+        android:id="@+id/btnLuna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnCelestia"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/btnCelestia"
+        android:text="Luna" 
+        android:onClick="showLuna"       
+        />
+
+    <Button
+        android:id="@+id/btnCelestia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnRain"
+        android:layout_alignBottom="@+id/btnRain"
+        android:layout_centerHorizontal="true"
+        android:text="Celestia" 
+        android:onClick="showCelestia"           
+        />
+
+    <EditText
+        android:id="@+id/txtViewMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnRain"
+        android:layout_alignRight="@+id/btnLuna"
+        android:layout_below="@+id/imgViewMain"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
